@@ -399,7 +399,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
-**[⬆ back to top](#目录)**
+**[⬆ 返回顶部](#目录)**
 
 ---
 
@@ -586,7 +586,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
 
 
-**[⬆ back to top](#目录)**
+**[⬆ 返回顶部](#目录)**
 
 ---
 
