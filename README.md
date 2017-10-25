@@ -3,11 +3,15 @@
 [![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 [![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 **前端清单**是一份在站点/HTML页面发布到生产环境之前需要测试的所有元素的详尽列表。
 
 它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。
+
+*在Product Hunt上投票或推荐来帮助**前端清单**的推广🌈。*
+[![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
 
 ## 目录
 
@@ -148,6 +152,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <!-- 帮助防止重复内容出现 -->
 <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-red.html">
 ```
+
+> - 📖 [Use canonical URLs - Search Console Help - Google Support](https://support.google.com/webmasters/answer/139066?hl=en)
+> - 📖 [5 common mistakes with rel=canonical - Google Webmaster Blog](https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html)
 
 ### HTML 标签
 
@@ -588,12 +595,15 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 
 * 🇯🇵 Japanese: [miya0001/Front-End-Checklist](https://github.com/miya0001/Front-End-Checklist)
 * 🇪🇸 Spanish: [eoasakura/Front-End-Checklist-ES](https://github.com/eoasakura/Front-End-Checklist-ES)
+* 🇨🇳 Chinese: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
+* 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
+* 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
 
 ---
 
-## Front-End Checklist Badge
+## 前端清单徽章
 
-If you want to show you are following the rules of the Front-End Checklist, put this badge on your README file!
+如果想显示出你的项目遵循了前端清单的各项规定，请将此徽章放在项目的README文件上！
 
 ➔ [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 
@@ -601,7 +611,7 @@ If you want to show you are following the rules of the Front-End Checklist, put 
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ 返回顶部](#目录)**
 
 ---
 
@@ -627,7 +637,7 @@ If you want to show you are following the rules of the Front-End Checklist, put 
 
 ## Support
 
-If you have any question or suggestion, don't hesitate to use Gitter or Twitter:
+如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：
 
 * [Chat on Gitter](https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 * [Twitter](https://twitter.com/thedaviddias)
@@ -636,8 +646,6 @@ If you have any question or suggestion, don't hesitate to use Gitter or Twitter:
 
 **[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
 
-## Translators
-**Chinese:** **[Johnsen](https://github.com/JohnsenZhou)**
 
 ## License
 
