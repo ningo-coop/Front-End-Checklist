@@ -1,4 +1,4 @@
-# 前端清单
+# 前端开发清单
 
 [![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
@@ -6,12 +6,11 @@
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-**前端清单**是一份在站点/HTML页面发布到生产环境之前需要测试的所有元素的详尽列表。
+**前端开发清单**是一份在站点/HTML页面发布到生产环境之前需要测试的所有元素的详尽列表。
 
 它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。
 
-*在Product Hunt上投票或推荐来帮助**前端清单**的推广🌈。*
-
+*在Product Hunt上投票或推荐来帮助**前端开发清单**的推广🌈。*
 [![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
 
 ## 目录
@@ -29,7 +28,7 @@
 
 ## How to use?
 
-**前端清单**中的所有项目都是大部分项目所必需的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:
+**前端开发清单**中的所有项目都是大部分项目所必需的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:
 
 * ![Low][low_img] 意味着该项目被**推荐**，但在某些特定情况下可以省略。
 * ![Medium][medium_img] 意味着该项目是**强烈推荐**的，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。
@@ -56,7 +55,7 @@
 <!doctype html>
 ```
 
-> 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
+> * 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
 *接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明*
 
@@ -89,7 +88,7 @@
 <title>Page Title less than 65 characters</title>
 ```
 
-> 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
+> * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 
 * [ ] **Description:** ![High][high_img] 提供`description`标签， 它是唯一的同时内容不能超过150个字符。
 
@@ -171,7 +170,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <html dir="rtl">
 ```
 
-> 📖 [dir - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
+> * 📖 [dir - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
 
 * [ ] **Alternate language:** ![Low][low_img] 指定网站的语言标签并与当前页面的语言相关联。
 
@@ -187,7 +186,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * 
 * [ ] **CSS Critical:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的所有CSS。在主要的CSS调用之前以单行(最小化)在`<style></style>`中嵌入。
 
-> 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical)
+> * 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical)
 
 * [ ] **CSS 顺序:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
 
@@ -248,18 +247,18 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **W3C 兼容:** ![High][high_img] 所有页面需要使用W3C验证器进行测试，以检测HTML代码中的可能存在的问题。
 
-> 🛠 [W3C validator](https://validator.w3.org/)
+> * 🛠 [W3C validator](https://validator.w3.org/)
 
 * [ ] **HTML Lint:** ![High][high_img] 使用工具来帮助我们分析HTML代码中可能存在的问题。
 
-> 🛠 [Dirty markup](https://dirtymarkup.com/)
+> * 🛠 [Dirty markup](https://dirtymarkup.com/)
 
 * [ ] **Desktop Browsers:** ![High][high_img] 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
 * [ ] **Mobile Browsers:**  ![High][high_img] 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari...).
 
 * [ ] **链接检查器:** ![High][high_img] 页面中链接没有断开，请确认你没有404错误。
 
-> 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
+> * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
 * [ ] **广告拦截器测试:** ![Medium][medium_img] 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。
 
@@ -310,7 +309,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **CSS embed or line:** ![High][high_img] 避免使用CSS嵌入或内联，仅用于必要的情况(例如: background-image for slider, CSS critical).
 * [ ] **浏览器内核前缀:** ![High][high_img] 对部分属性加上浏览器内核前缀，生成你浏览器兼容的属性。
 
-> 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
+> * 🛠 [Autoprefixer CSS online](https://autoprefixer.github.io/)
 
 ### 性能
 
@@ -365,6 +364,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > ***注意:*** 许多开发人员认为设置了宽度和高度就不能实现响应式设计，实际上并不是这样的。
 
 * [ ] **Alternative text:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片。
+
+> * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
+
 * [ ] **懒加载:** ![Medium][medium_img] 图片懒加载 (A noscript fallback is always provided).
 
 **[⬆ 返回顶部](#目录)**
@@ -383,15 +385,15 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **JavaScript安全性:**
 
-> [用JavaScript开发安全应用程序指南](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)*
+> [用JavaScript开发安全应用程序指南](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
 * [ ] **非阻塞:** ![Medium][medium_img] JavaScript文件使用async或延迟使用defer属性异步加载。
 
-> 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
+> * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
 * [ ] **Modernizr:** ![Low][low_img] 如果您需要定位某些特定功能，则可以使用自定义Modernizr在`<html>`标签中添加class。
 
-> 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
+> * 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
 
 ### JavaScript 测试
 
@@ -470,7 +472,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ### 为将到来的请求做准备
 
 > 📖 [以下几种技术的详细说明](https://css-tricks.com/prefetching-preloading-prebrowsing/)
-
+> 
 * [ ] **DNS解析:** ![Low][low_img] 使用`dns-prefetch`让第三方DNS服务商主动去执行域名解析的功能。
 
 ```html
@@ -521,14 +523,14 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 - [ ] **颜色对比度:** ![Medium][medium_img] 颜色对比度至少通过WCAG AA标准(移动端需要通过AAA)。
 
-> 🛠 [Contrast ratio](https://leaverou.github.io/contrast-ratio/)
+> * 🛠 [Contrast ratio](https://leaverou.github.io/contrast-ratio/)
 
 #### 标题
 
 * [ ] **H1:** ![High][high_img] 所有页面都有H1，它不是网站的标题。
 * [ ] **Headings:** ![High][high_img] 标题应以正确的顺序合理使用(H1至H6)。
 
-> 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+> * 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
 #### Landmarks
 
@@ -536,13 +538,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 - [ ] **navigation角色:** ![High][high_img] `<nav>` 标签中加入 `role="navigation"`属性。
 - [ ] **main角色:** ![High][high_img] `<main>` 标签中加入 `role="main"`属性。
 
-> 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
+> * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
 
 ### 语义化
 
 - [ ] **使用特定的HTML5输入类型:** ![Medium][medium_img] 这对于显示不同类型的自定义键盘和小部件的移动设备尤其重要。
 
-> 📖 [Mobile Input Types](http://mobileinputtypes.com/)
+> * 📖 [Mobile Input Types](http://mobileinputtypes.com/)
 
 ### 表单
 
@@ -554,13 +556,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **Accessibility标准测试:** ![High][high_img] 使用WAVE工具测试你的页面是否符合accessibility标准。
 
-> 🛠 [Wave testing](http://wave.webaim.org/)
+> * 🛠 [Wave testing](http://wave.webaim.org/)
 
 * [ ] **Keyboard navigation:** ![High][high_img] 在你的键盘上以可能出现的操作顺序去测试，确保所有交互式元素都可访问和可用。
 * [ ] **Screen-reader:** ![Medium][medium_img] 所有页面都在屏幕阅读器(VoiceOver, ChromeVox, NVDA or Lynx)中进行了测试。
 * [ ] **Focus style:** ![High][high_img] 如果焦点被禁用，它将被CSS中的可见状态所替代。
 
-> 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
+> * 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
 **[⬆ 返回顶部](#目录)**
 
@@ -579,6 +581,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 📖 [结构化数据简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > * 🛠 使用[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)测试你的页面。
+> * 🛠 适用于结构化数据的完整结构列表[Schema.org Full Heirarchy](http://schema.org/docs/full.html)
 
 * [ ] **Sitemap HTML:** ![Medium][medium_img] 提供HTML网站地图，可通过网站页脚中的链接进行访问。
 
@@ -599,12 +602,13 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 * 🇨🇳 Chinese: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
 * 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
 * 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
+* 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
 
 ---
 
-## 前端清单徽章
+## 前端开发清单徽章
 
-如果想显示出你的项目遵循了前端清单的各项规定，请将此徽章放在项目的README文件上！
+如果想显示出你的项目遵循了前端开发清单的各项规定，请将此徽章放在项目的README文件上！
 
 ➔ [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 
@@ -622,11 +626,11 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 
 ### Guide
 
-**前端清单** 项目有两个分支:
+**前端开发清单** 项目有两个分支:
 
 #### 1. `master`
 
-该分支包含`README.md`,内容会自动反映到[前端清单](http://frontendchecklist.com/)。
+该分支包含`README.md`,内容会自动反映到[前端开发清单](http://frontendchecklist.com/)。
 网站上。
 #### 2. `develop`
 
