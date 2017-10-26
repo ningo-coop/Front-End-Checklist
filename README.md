@@ -49,7 +49,7 @@
 
 ### Meta 标签
 
-* [ ] **Doctype:** ![High][high_img] Doctype是HTML5的属性，需要声明在HTML文件的顶部。
+* [ ] **Doctype:** ![High][high_img] Doctype声明标签HTML5，需要写在HTML文件的顶部。
 
 ```html
 <!-- Doctype HTML5 -->
