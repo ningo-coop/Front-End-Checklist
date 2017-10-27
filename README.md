@@ -23,7 +23,7 @@
 5. **[Images](#images)**
 6. **[JavaScript](#javascript)**
 7. **[Security](#security)**
-8. **[Performance](#performance-1)**
+8. **[Performance](#performance)**
 9. **[Accessibility](#accessibility)**
 10. **[SEO](#seo)**
 
