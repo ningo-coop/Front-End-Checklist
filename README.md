@@ -11,6 +11,7 @@
 它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。
 
 *在Product Hunt上投票或推荐来帮助**前端开发清单**的推广🌈。*
+
 [![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
 
 ## 目录
@@ -32,7 +33,7 @@
 
 * ![Low][low_img] 意味着该项目被**推荐**，但在某些特定情况下可以省略。
 * ![Medium][medium_img] 意味着该项目是**强烈推荐**的，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。
-* ![High][high_img] 意味着项目**不能被任何理由省略**。你的页面可能会导致功能障碍或有可访问性或SEO问题。测试优先级需要首先考虑这些元素。
+* ![High][high_img] 意味着项目**不能被任何理由省略**。你的页面可能会导致部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。
 
 某些资源拥有特定的标识符，帮助你去理解清单上不同类型的内容或帮助。
 
@@ -44,7 +45,7 @@
 
 ## Head
 
-> **注意:** 你能在HTML文档的`<head>`中找到[所有的清单列表](https://github.com/joshbuchea/HEAD)。
+> **注意:** 你能在[HEAD列表](https://github.com/joshbuchea/HEAD)中找到HTML文档`<head>`标签内所有可配置的属性。
 
 ### Meta 标签
 
@@ -59,13 +60,13 @@
 
 *接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明*
 
-* [ ] **Charset:** ![High][high_img] 正确声明Charset标签(UTF-8)。
+* [ ] **Charset:** ![High][high_img] 正确声明`Charset` meta(UTF-8)。
 ```html
 <!-- 设置文档的字符编码 -->
 <meta charset="utf-8">
 ```
 
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] `X-UA-Compatible` 元标签。
+* [ ] **X-UA-Compatible:** ![Medium][medium_img] 正确声明`X-UA-Compatible` meta。
 
 ```html
 <!-- 指示Internet Explorer使用其最新的渲染引擎 -->
@@ -74,18 +75,18 @@
 
 > 📖 [指定旧文档模式(Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
-* [ ] **Viewport:** ![High][high_img] 正确声明`viewport`标签。
+* [ ] **Viewport:** ![High][high_img] 正确声明`viewport` meta。
 
 ```html
 <!-- 响应式网页设计viewpoint声明 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-* [ ] **Title:** ![High][high_img] 所有页面都使用`title`(SEO:包括网站标题不超过65个字符)。
+* [ ] **Title:** ![High][high_img] 所有页面都使用`title`(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。
 
 ```html
 <!-- 文档标题 -->
-<title>Page Title less than 65 characters</title>
+<title>网站标题不超过65个字符</title>
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
@@ -96,6 +97,7 @@
 <!-- Meta Description -->
 <meta name="description" content="Description of the page less than 150 characters">
 ```
+> * 📖[Meta Description - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
 
 * [ ] **Favicons:** ![Medium][medium_img] 每个`favicon`都被创建并正确显示，如果你只有一个`favicon.ico`，把它放在你网站的根目录下。 通常来说你不需要做任何操作他就能正常显示。 然而, 使用一下示例中的方法是比较好的做法。不过现在我们推荐使用**PNG**格式，相比`.ico`格式有较好的优势(推荐尺寸: 32x32px)。
 
@@ -192,7 +194,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### Social meta
 
-强烈推荐***Facebook OG*** and ***Twitter Cards***。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体标签。
+强烈推荐***Facebook OG*** and ***Twitter Cards***。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体的meta。
 
 * [ ] **Facebook Open Graph:** ![Low][low_img] 所有Facebook Open Graph（OG）都经过测试并且没有任何错误。图片至少需要600 x 315像素，建议使用1200 x 630像素。
 ```html
@@ -356,6 +358,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **优化:** ![High][high_img] 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。 All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
+<<<<<<< HEAD
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
 * [ ] **视网膜屏:** ![Low][low_img] 提供x2 或 3x的图像来支持视网膜屏显示。
 * [ ] **雪碧图:** ![Medium][medium_img] 小图片放到一个雪碧图中。
@@ -364,6 +367,14 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > ***注意:*** 许多开发人员认为设置了宽度和高度就不能实现响应式设计，实际上并不是这样的。
 
 * [ ] **Alternative text:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片。
+=======
+> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
+
+* [ ] **Retina:** ![Low][low_img] You provide layout images 2x or 3x, support retina display.
+* [ ] **Sprite:** ![Medium][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
+* [ ] **Width and Height:** ![High][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
+* [ ] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describe the image visually.
+>>>>>>> 64cf04660eb5001873c139435844efdb83ff88de
 
 > * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
