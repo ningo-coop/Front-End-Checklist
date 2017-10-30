@@ -90,6 +90,7 @@
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
+> * 🛠 [SERP Snippet Generator](https://www.sistrix.com/serp-snippet-generator/)
 
 * [ ] **Description:** ![High][high_img] 提供`description`标签， 它是唯一的同时内容不能超过150个字符。
 
@@ -184,19 +185,26 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > 📖 [关于条件注释(Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
+<<<<<<< HEAD
 * [ ] **RSS feed:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
 * 
 * [ ] **CSS Critical:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的所有CSS。在主要的CSS调用之前以单行(最小化)在`<style></style>`中嵌入。
 
 > * 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical)
 
-* [ ] **CSS 顺序:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
+* [ ] **inline critical CSS:** ![Medium][medium_img] CSS which styles content that is immediately visible during pageload ("above the fold content") is called "critical CSS". It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).
+> * 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical) automates this
+
+* [ ] **CSS 加载顺序:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
 
 ### Social meta
 
 强烈推荐***Facebook OG*** and ***Twitter Cards***。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体的meta。
 
 * [ ] **Facebook Open Graph:** ![Low][low_img] 所有Facebook Open Graph（OG）都经过测试并且没有任何错误。图片至少需要600 x 315像素，建议使用1200 x 630像素。
+
+> **注意:** 使用 `og:image:width` 和 `og:image:height` 将会爬取制定尺寸的图像，以便图像能够快速呈现，无需进行异步下载和处理。
+
 ```html
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://example.com/page.html">
@@ -205,10 +213,15 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <meta property="og:description" content="Description Here">
 <meta property="og:site_name" content="Site Name">
 <meta property="og:locale" content="en_US">
+<!-- Next tags are optional but recommended -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 ```
 
 > * 📖 [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
 > * 🛠 使用[Facebook OG testing](https://developers.facebook.com/tools/debug/)测试你的页面。
+> * 📖 [Best Practices - Sharing](https://developers.facebook.com/docs/sharing/best-practices/)
+> * 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
 
 * [ ] **Twitter Card:** ![Low][low_img]
 
@@ -275,6 +288,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ## Webfonts
 
 * [ ] **Webfont格式:** ![High][high_img] 现代浏览器都支持WOFF、WOFF2、TTF格式
+
+> **注意:** 使用webfonts可能会导致文档样式闪烁以及文本不可见，所以在使用时需要考虑使用后备字体，或者使用webfont加载器来控制字体加载行为。
+
 > * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
 > * 📖 [TTF/OTF - TrueType and OpenType font support](https://caniuse.com/#feat=ttf)
@@ -282,13 +298,15 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **Webfont 大小:** ![High][high_img] Webfont大小不超过 2 MB (包括所有版本在内)。
 
-**[⬆ 返回顶部](#table-of-contents)**
+*  [ ] **Webfont 加载器:** ![Low][low_img] 使用webfont加载器控制加载行为。
 
----
+> * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
+
+**[⬆ 返回顶部](#table-of-contents)**
 
 ## CSS
 
-> **注意:** 大部分前端开发人员都会看看[CSS指南](https://cssguidelin.es/)和[Sass指南](https://sass-guidelin.es/)。如果你对CSS属性有疑问，可以访问[CSS参考文档](http://cssreference.io/).
+> **注意:** 大部分前端开发人员都会看看[CSS指南](https://cssguidelin.es/)和[Sass指南](https://sass-guidelin.es/)。如果你对CSS属性有疑问，可以访问[CSS参考文档](http://cssreference.io/)。
 
 * [ ] **响应式网站设计:** ![High][high_img] 网站使用响应式设计。
 * [ ] **CSS打印属性:** ![Medium][medium_img] 提供打印样式表，并确保使用正确。
@@ -340,6 +358,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **CSS验证器:** ![Medium][medium_img] CSS经过测试，同时所有错误都被修复。
 > 🛠 [CSS验证器](https://jigsaw.w3.org/css-validator/)
 
+* [ ] **桌面浏览器:** ![High][high_img] 所有页面都在桌面浏览器进行了测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
+* [ ] **移动端浏览器:**  ![High][high_img] 所有页面都在移动端浏览器进行了测试(Native browser, Chrome, Safari...)。
+* [ ] **操作系统:**  ![High][high_img] 所有页面都在当前操作系统上进行了测试(Windows, Android, iOS, Mac...)。
+* [ ] **Pixel perfect:** ![High][high_img] 页面需要像素级实现。根据设计稿的质量，你可能不会100％与设计稿相同，但你的网页需要尽可能的靠近设计稿的要求。
+
+> [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
+
 * [ ] **Reading direction:** ![High][high_img] 如果需要的话，所有页面都需要对LTR和RTL语言进行测试。
 
 > * 📖 [构建RTL-Aware Web Apps & Websites: Part 1 | Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
@@ -358,25 +383,17 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **优化:** ![High][high_img] 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。 All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-<<<<<<< HEAD
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
+
+* [ ] **Picture/Srcset:** ![Medium][medium_img] 使用Picture/Srcset为用户当前的视口提供最合适的图像。
+
+> * 📖 [如何使用srcset构建响应式图像](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)。
+
 * [ ] **视网膜屏:** ![Low][low_img] 提供x2 或 3x的图像来支持视网膜屏显示。
 * [ ] **雪碧图:** ![Medium][medium_img] 小图片放到一个雪碧图中。
 * [ ] **宽高:** ![High][high_img] 所有`<img>`都需要设置高度和宽度(不要指定px 和 %)。
-
-> ***注意:*** 许多开发人员认为设置了宽度和高度就不能实现响应式设计，实际上并不是这样的。
-
-* [ ] **Alternative text:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片。
-=======
-> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
-
-* [ ] **Retina:** ![Low][low_img] You provide layout images 2x or 3x, support retina display.
-* [ ] **Sprite:** ![Medium][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-* [ ] **Width and Height:** ![High][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-* [ ] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describe the image visually.
->>>>>>> 64cf04660eb5001873c139435844efdb83ff88de
-
-> * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
+* [ ] **图片描述文本:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片。
+>  📖 [Alt-文本: 终极指南](https://axesslab.com/alt-texts/)
 
 * [ ] **懒加载:** ![Medium][medium_img] 图片懒加载 (A noscript fallback is always provided).
 
@@ -479,6 +496,10 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Cookie规范: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 > * 🛠 [浏览器Cookie限制](http://browsercookielimits.squawky.net/)
+
+* [ ] **第三方组件:** ![Medium][medium_img] 在可能的情况下，用静态组件替代依赖于外部JS的第三方iframe或组件（如共享按钮），从而限制对外部API的调用，并将用户活动保持为私有。
+
+> * 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
 
 ### 为将到来的请求做准备
 
@@ -614,6 +635,7 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 * 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
 * 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
 * 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
+* 🇹🇼 Traditional Chinese: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 
 ---
 
@@ -656,6 +678,7 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：
 
 * [Chat on Gitter](https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+* [Facebook](https://www.facebook.com/frontendchecklist/)
 * [Twitter](https://twitter.com/thedaviddias)
 
 ## 作者
