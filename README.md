@@ -33,7 +33,7 @@
 
 * ![Low][low_img] 意味着该项目被**推荐**，但在某些特定情况下可以省略。
 * ![Medium][medium_img] 意味着该项目是**强烈推荐**的，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。
-* ![High][high_img] 意味着项目**不能被任何理由省略**。你的页面可能会导致部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。
+* ![High][high_img] 意味着项目**不能被任何理由忽略**。忽略可能会导致你的页面部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。
 
 某些资源拥有特定的标识符，帮助你去理解清单上不同类型的内容或帮助。
 
@@ -60,13 +60,13 @@
 
 *接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明*
 
-* [ ] **Charset:** ![High][high_img] 正确声明`Charset` meta(UTF-8)。
+* [ ] **Charset（字符类型）:** ![High][high_img] 正确声明`Charset` meta(UTF-8)。
 ```html
 <!-- 设置文档的字符编码 -->
 <meta charset="utf-8">
 ```
 
-* [ ] **X-UA-Compatible:** ![Medium][medium_img] 正确声明`X-UA-Compatible` meta。
+* [ ] **X-UA-Compatible（IE相关设定）:** ![Medium][medium_img] 正确声明`X-UA-Compatible` meta。
 
 ```html
 <!-- 指示Internet Explorer使用其最新的渲染引擎 -->
@@ -75,14 +75,14 @@
 
 > 📖 [指定旧文档模式(Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
-* [ ] **Viewport:** ![High][high_img] 正确声明`viewport` meta。
+* [ ] **Viewport（视口）:** ![High][high_img] 正确声明`viewport` meta。
 
 ```html
 <!-- 响应式网页设计viewpoint声明 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-* [ ] **Title:** ![High][high_img] 所有页面都使用`title`(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。
+* [ ] **Title（标题）:** ![High][high_img] 所有页面都使用`title`(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。
 
 ```html
 <!-- 文档标题 -->
@@ -90,8 +90,9 @@
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
+> * 🛠 [SERP Snippet Generator](https://www.sistrix.com/serp-snippet-generator/)
 
-* [ ] **Description:** ![High][high_img] 提供`description`标签， 它是唯一的同时内容不能超过150个字符。
+* [ ] **Description（描述）:** ![High][high_img] 提供`description`标签， 它是唯一的同时内容不能超过150个字符。
 
 ```html
 <!-- Meta Description -->
@@ -160,13 +161,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### HTML 标签
 
-* [ ] **Language tag:** ![High][high_img] 指定你网站的语言标签并与当前页面语言相关联。
+* [ ] **Language tag（语言标签）:** ![High][high_img] 指定你网站的语言标签并与当前页面语言相关联。
 
 ```html
 <html lang="zh_cn">
 ```
 
-* [ ] **Direction tag:** ![Medium][medium_img] `direction`属性规定元素内容的文本方向。(可以在另一个HTML标签上使用)。
+* [ ] **Direction tag（方向标签）:** ![Medium][medium_img] `direction`属性规定元素内容的文本方向。(可以在另一个HTML标签上使用)。
 
 ```html
 <html dir="rtl">
@@ -174,29 +175,32 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 📖 [dir - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
 
-* [ ] **Alternate language:** ![Low][low_img] 指定网站的语言标签并与当前页面的语言相关联。
+* [ ] **Alternate language（备用语言）:** ![Low][low_img] 指定网站的语言标签并与当前页面的语言相关联。
 
 ```html
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 ```
 
-* [ ] **条件注释:** ![Low][low_img] 如有需要，可针对IE添加条件注释。
+* [ ] **Alternate language（条件注释）:** ![Low][low_img] 如有需要，可针对IE添加条件注释。
 
 > 📖 [关于条件注释(Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
-* [ ] **RSS feed:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
+* [ ] **RSS feed（RSS 訂閱）:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
 * 
-* [ ] **CSS Critical:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的所有CSS。在主要的CSS调用之前以单行(最小化)在`<style></style>`中嵌入。
+* [ ] **CSS Critical（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
 
 > * 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical)
 
-* [ ] **CSS 顺序:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
+* [ ] **CSS order（加载顺序）:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
 
 ### Social meta
 
 强烈推荐***Facebook OG*** and ***Twitter Cards***。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体的meta。
 
 * [ ] **Facebook Open Graph:** ![Low][low_img] 所有Facebook Open Graph（OG）都经过测试并且没有任何错误。图片至少需要600 x 315像素，建议使用1200 x 630像素。
+
+> **注意:** 使用 `og:image:width` 和 `og:image:height` 将会爬取制定尺寸的图像，以便图像能够快速呈现，无需进行异步下载和处理。
+
 ```html
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://example.com/page.html">
@@ -205,10 +209,15 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <meta property="og:description" content="Description Here">
 <meta property="og:site_name" content="Site Name">
 <meta property="og:locale" content="en_US">
+<!-- Next tags are optional but recommended -->
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 ```
 
 > * 📖 [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
 > * 🛠 使用[Facebook OG testing](https://developers.facebook.com/tools/debug/)测试你的页面。
+> * 📖 [Best Practices - Sharing](https://developers.facebook.com/docs/sharing/best-practices/)
+> * 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
 
 * [ ] **Twitter Card:** ![Low][low_img]
 
@@ -233,21 +242,21 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 最佳实践
 
-* [ ] **HTML5 Semantic Elements:** ![High][high_img] 正确的使用HTML5语义化标签(header, section, footer, main...).
+* [ ] **HTML5 Semantic Elements（HTML5语义化元素）:** ![High][high_img] 正确的使用HTML5语义化标签(header, section, footer, main...).
 
 > 📖 [HTML 参考](http://htmlreference.io/)
 
-* [ ] **Error pages:** ![High][high_img] 404页面和5xx错误的存在。5xx错误页面需要集成其CSS(在当前服务器上无外部调用)。
+* [ ] **Error pages（错误页面）:** ![High][high_img] 404页面和5xx错误的存在。5xx错误页面需要集成其CSS(在当前服务器上无外部调用)。
 
 * [ ] **Noopener:** ![Medium][medium_img] 如果你使用外部链接`target="_blank"`, 你的链接必须有个`rel="noopener"`属性，防止制表符的隐藏。如果你需要兼容旧版本的火狐浏览器，请使用`rel="noopener noreferrer"`。
 
 > 📖 [关于 rel=noopener](https://mathiasbynens.github.io/rel-noopener/)
 
-* [ ] **清除注释:** ![Low][low_img] 在将页面发布到生产环境之前，应该删除不必要的代码。
+* [ ] **Clean up comments（清除注释）:** ![Low][low_img] 在将页面发布到生产环境之前，应该删除不必要的代码。
 
 ### HTML 测试
 
-* [ ] **W3C 兼容:** ![High][high_img] 所有页面需要使用W3C验证器进行测试，以检测HTML代码中的可能存在的问题。
+* [ ] **W3C compliant（兼容）:** ![High][high_img] 所有页面需要使用W3C验证器进行测试，以检测HTML代码中的可能存在的问题。
 
 > * 🛠 [W3C validator](https://validator.w3.org/)
 
@@ -258,11 +267,11 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **Desktop Browsers:** ![High][high_img] 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
 * [ ] **Mobile Browsers:**  ![High][high_img] 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari...).
 
-* [ ] **链接检查器:** ![High][high_img] 页面中链接没有断开，请确认你没有404错误。
+* [ ] **Link checker（链接检查器）:** ![High][high_img] 页面中链接没有断开，请确认你没有404错误。
 
 > * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
-* [ ] **广告拦截器测试:** ![Medium][medium_img] 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。
+* [ ] **Adblockers test（广告拦截器测试）:** ![Medium][medium_img] 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。
 
 - [ ] **Pixel perfect:** ![High][high_img] 页面的像素级实现。根据设计稿的质量，你的页面可能做不到100%的还原，但你的网页需要尽可能的靠近设计稿。
 
@@ -274,21 +283,26 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ## Webfonts
 
-* [ ] **Webfont格式:** ![High][high_img] 现代浏览器都支持WOFF、WOFF2、TTF格式
+* [ ] **Webfont format（字体格式）:** ![High][high_img] 现代浏览器都支持WOFF、WOFF2、TTF格式
+
+> **注意:** 使用webfonts可能会导致文档样式闪烁以及文本不可见，所以在使用时需要考虑使用后备字体，或者使用webfont加载器来控制字体加载行为。
+
 > * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
 > * 📖 [TTF/OTF - TrueType and OpenType font support](https://caniuse.com/#feat=ttf)
 > * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
 
-* [ ] **Webfont 大小:** ![High][high_img] Webfont大小不超过 2 MB (包括所有版本在内)。
+* [ ] **Webfont size（字体大小）:** ![High][high_img] Webfont大小不超过 2 MB (包括所有版本在内)。
+
+*  [ ] **Webfont loader（字体加载器）:** ![Low][low_img] 使用webfont加载器控制加载行为。
+
+> * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
 
 **[⬆ 返回顶部](#table-of-contents)**
 
----
-
 ## CSS
 
-> **注意:** 大部分前端开发人员都会看看[CSS指南](https://cssguidelin.es/)和[Sass指南](https://sass-guidelin.es/)。如果你对CSS属性有疑问，可以访问[CSS参考文档](http://cssreference.io/).
+> **注意:** 大部分前端开发人员都会看看[CSS指南](https://cssguidelin.es/)和[Sass指南](https://sass-guidelin.es/)。如果你对CSS属性有疑问，可以访问[CSS参考文档](http://cssreference.io/)。
 
 * [ ] **响应式网站设计:** ![High][high_img] 网站使用响应式设计。
 * [ ] **CSS打印属性:** ![Medium][medium_img] 提供打印样式表，并确保使用正确。
@@ -340,6 +354,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **CSS验证器:** ![Medium][medium_img] CSS经过测试，同时所有错误都被修复。
 > 🛠 [CSS验证器](https://jigsaw.w3.org/css-validator/)
 
+* [ ] **桌面浏览器:** ![High][high_img] 所有页面都在桌面浏览器进行了测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
+* [ ] **移动端浏览器:**  ![High][high_img] 所有页面都在移动端浏览器进行了测试(Native browser, Chrome, Safari...)。
+* [ ] **操作系统:**  ![High][high_img] 所有页面都在当前操作系统上进行了测试(Windows, Android, iOS, Mac...)。
+* [ ] **Pixel perfect:** ![High][high_img] 页面需要像素级实现。根据设计稿的质量，你可能不会100％与设计稿相同，但你的网页需要尽可能的靠近设计稿的要求。
+
+> [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
+
 * [ ] **Reading direction:** ![High][high_img] 如果需要的话，所有页面都需要对LTR和RTL语言进行测试。
 
 > * 📖 [构建RTL-Aware Web Apps & Websites: Part 1 | Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
@@ -358,25 +379,17 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **优化:** ![High][high_img] 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。 All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
-<<<<<<< HEAD
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
+
+* [ ] **Picture/Srcset:** ![Medium][medium_img] 使用Picture/Srcset为用户当前的视口提供最合适的图像。
+
+> * 📖 [如何使用srcset构建响应式图像](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)。
+
 * [ ] **视网膜屏:** ![Low][low_img] 提供x2 或 3x的图像来支持视网膜屏显示。
 * [ ] **雪碧图:** ![Medium][medium_img] 小图片放到一个雪碧图中。
 * [ ] **宽高:** ![High][high_img] 所有`<img>`都需要设置高度和宽度(不要指定px 和 %)。
-
-> ***注意:*** 许多开发人员认为设置了宽度和高度就不能实现响应式设计，实际上并不是这样的。
-
-* [ ] **Alternative text:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片。
-=======
-> * 🛠 Use [ImageOptim](https://imageoptim.com/) to optimise your images for free.
-
-* [ ] **Retina:** ![Low][low_img] You provide layout images 2x or 3x, support retina display.
-* [ ] **Sprite:** ![Medium][medium_img] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-* [ ] **Width and Height:** ![High][high_img] Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-* [ ] **Alternative text:** ![High][high_img] All `<img>` have an alternative text which describe the image visually.
->>>>>>> 64cf04660eb5001873c139435844efdb83ff88de
-
-> * 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
+* [ ] **图片描述文本:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片（在无障碍网页中尤其重要）。
+>  📖 [Alt-文本: 终极指南](https://axesslab.com/alt-texts/)
 
 * [ ] **懒加载:** ![Medium][medium_img] 图片懒加载 (A noscript fallback is always provided).
 
@@ -398,11 +411,11 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > [用JavaScript开发安全应用程序指南](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
-* [ ] **非阻塞:** ![Medium][medium_img] JavaScript文件使用async或延迟使用defer属性异步加载。
+* [ ] **Non-blocking（非阻塞）:** ![Medium][medium_img] JavaScript文件使用async或延迟使用defer属性异步加载。
 
 > * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Modernizr:** ![Low][low_img] 如果您需要定位某些特定功能，则可以使用自定义Modernizr在`<html>`标签中添加class。
+* [ ] **Modernizr:** ![Low][low_img] 如果您需要指定某些特定功能，则可以使用自定义Modernizr在`<html>`标签中添加class。
 
 > * 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
 
@@ -451,7 +464,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-* [ ] **X-Frame-Options (XFO)** ![Medium][medium_img] 保护网站的访问者免受劫持攻击。
+* [ ] **X-Frame-Options (XFO)（外部框架连接设定）** ![Medium][medium_img] 保护网站的访问者免受劫持攻击。
 
 > * 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > * 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
@@ -479,6 +492,10 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Cookie规范: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 > * 🛠 [浏览器Cookie限制](http://browsercookielimits.squawky.net/)
+
+* [ ] **第三方组件:** ![Medium][medium_img] 在可能的情况下，用静态组件替代依赖于外部JS的第三方iframe或组件（如共享按钮），从而限制对外部API的调用，并将用户活动保持为私有。
+
+> * 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
 
 ### 为将到来的请求做准备
 
@@ -569,9 +586,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [Wave testing](http://wave.webaim.org/)
 
-* [ ] **Keyboard navigation:** ![High][high_img] 在你的键盘上以可能出现的操作顺序去测试，确保所有交互式元素都可访问和可用。
-* [ ] **Screen-reader:** ![Medium][medium_img] 所有页面都在屏幕阅读器(VoiceOver, ChromeVox, NVDA or Lynx)中进行了测试。
-* [ ] **Focus style:** ![High][high_img] 如果焦点被禁用，它将被CSS中的可见状态所替代。
+* [ ] **Keyboard navigation（键盘导航）:** ![High][high_img] 在你的键盘上以可能出现的操作顺序去测试，确保所有交互式元素都可访问和可用。
+* [ ] **Screen-reader（屏幕阅读器）:** ![Medium][medium_img] 所有页面都在屏幕阅读器(VoiceOver, ChromeVox, NVDA or Lynx)中进行了测试。
+* [ ] **Focus style（专注风格）:** ![High][high_img] 如果焦点被禁用，它将被CSS中的可见状态所替代。
 
 > * 📹 [Managing Focus - A11ycasts #22](https://www.youtube.com/watch?v=srLRSQg6Jgg&index=5&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
 
@@ -588,13 +605,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 使用[Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)测试你的`robots.txt`。 
 
-* [ ] **结构化数据:** ![High][high_img] 使用结构化数据的页面通过测试并且没有错误。结构化数据帮助爬虫理解当前页面的内容。
+* [ ] **Structured Data（结构化数据）:** ![High][high_img] 使用Structured Data的页面通过测试并且没有错误。Structured Data会帮助爬虫理解当前页面的内容。
 
-> * 📖 [结构化数据简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
+> * 📖 [Structured Data简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > * 🛠 使用[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)测试你的页面。
 > * 🛠 适用于结构化数据的完整结构列表[Schema.org Full Heirarchy](http://schema.org/docs/full.html)
 
-* [ ] **Sitemap HTML:** ![Medium][medium_img] 提供HTML网站地图，可通过网站页脚中的链接进行访问。
+* [ ] **Sitemap HTML（HTML网站地图）:** ![Medium][medium_img] 提供HTML网站地图，可通过网站页脚中的链接进行访问。
 
 > * 📖 [Sitemap 指南 | Google 支持](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
@@ -614,6 +631,7 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 * 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
 * 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
 * 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
+* 🇹🇼 Traditional Chinese: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 
 ---
 
@@ -656,6 +674,7 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：
 
 * [Chat on Gitter](https://gitter.im/Front-End-Checklist/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+* [Facebook](https://www.facebook.com/frontendchecklist/)
 * [Twitter](https://twitter.com/thedaviddias)
 
 ## 作者
