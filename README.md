@@ -86,7 +86,7 @@
 
 ```html
 <!-- 文档标题 -->
-<title>网站标题不超过65个字符</title>
+<title>网站标题不超过55个字符</title>
 ```
 
 > * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
