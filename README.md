@@ -187,9 +187,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **RSS feed（RSS 訂閱）:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
 * 
-* [ ] **CSS Critical（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
+* [ ] **Inline critical CSS（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
 
-> * 🛠 [Critical by Addy Osmani on Github](https://github.com/addyosmani/critical)
+> * 🛠 [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical)
 
 * [ ] **CSS order（加载顺序）:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
 
@@ -263,6 +263,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **HTML Lint:** ![High][high_img] 使用工具来帮助我们分析HTML代码中可能存在的问题。
 
 > * 🛠 [Dirty markup](https://dirtymarkup.com/)
+> * 🛠 [Sonar a linting tool for the web](https://sonarwhal.com/)
 
 * [ ] **Desktop Browsers:** ![High][high_img] 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
 * [ ] **Mobile Browsers:**  ![High][high_img] 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari...).
@@ -469,6 +470,12 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > * 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
+* [ ] **Content Security Policy（内容安全策略）** ![Medium][medium_img] 定义内容如何加载到您的网站上的方式以及允许加载的位置。也可以用来防止劫持攻击。
+ 
+> * 📖 [内容安全策略 - 介绍 - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
+> * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
+> * 📖 [CSP Cheat Sheet - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
+
 **[⬆ 返回顶部](#目录)**
 
 ---
@@ -534,6 +541,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > * 🛠 [用Google测试移动端速度](https://testmysite.withgoogle.com)
 > * 🛠 [WebPagetest - 网站性能和优化测试](https://www.webpagetest.org/)
+> * 🛠 [GTmetrix - Website speed and performance optimization](https://gtmetrix.com/)
 
 **[⬆ 返回顶部](#目录)**
 
