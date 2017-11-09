@@ -2,6 +2,7 @@
 
 [![Join the chat at https://gitter.im/Front-End-Checklist/Lobby](https://badges.gitter.im/Front-End-Checklist/Lobby.svg)](https://gitter.im/Front-End-Checklist/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
+[![Backers on Open Collective](https://opencollective.com/front-end-checklist/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/front-end-checklist/sponsors/badge.svg)](#sponsors)
 [![Contributors](https://img.shields.io/github/contributors/thedaviddias/Front-End-Checklist.svg)](https://github.com/thedaviddias/Front-End-Checklist/graphs/contributors)
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/thedaviddias/front-end-checklist)
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -284,9 +285,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ## Webfonts
 
+> **注意:** 使用webfonts可能会导致文档样式闪烁以及文本不可见，所以在使用时需要考虑使用后备字体，或者使用webfont加载器来控制字体加载行为。
+> 
+> * 📖 [Google Technical considerations about webfonts](https://developers.google.com/fonts/docs/technical_considerations)
+
 * [ ] **Webfont format（字体格式）:** ![High][high_img] 现代浏览器都支持WOFF、WOFF2、TTF格式
 
-> **注意:** 使用webfonts可能会导致文档样式闪烁以及文本不可见，所以在使用时需要考虑使用后备字体，或者使用webfont加载器来控制字体加载行为。
+> * 📖 [Google Technical considerations about webfonts](https://developers.google.com/fonts/docs/technical_considerations)
 
 > * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
 > * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
@@ -381,6 +386,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
+> * 🛠 使用[Kraken.io](https://kraken.io/web-interface)优化png和jpg格式图像。
 
 * [ ] **Picture/Srcset:** ![Medium][medium_img] 使用Picture/Srcset为用户当前的视口提供最合适的图像。
 
@@ -575,6 +581,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 - [ ] **main角色:** ![High][high_img] `<main>` 标签中加入 `role="main"`属性。
 
 > * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
+> * 📖 [ARIA roles categorization](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
 
 ### 语义化
 
@@ -624,7 +631,6 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Sitemap 指南 | Google 支持](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
 
-
 **[⬆ back to top](#目录)**
 
 ---
@@ -641,6 +647,7 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 * 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
 * 🇹🇼 Traditional Chinese: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
 * 🇫🇷 French: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
+* 🇷🇺 Russian: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
 
 ---
 
@@ -674,10 +681,6 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 
 这个分支将用于对结构和内容进行一些重大更改。不过最好还是使用主分支来修复小错误或添加新项目。
 
-### 贡献
-
-查看所有贡献人员 [contributors](https://github.com/thedaviddias/frontendchecklist/graphs/contributors).
-
 ## Support
 
 如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：
@@ -690,6 +693,33 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 
 **[David Dias](https://github.com/thedaviddias/Front-End-Checklist)**
 
+## 贡献者
+
+感谢以下人员对本项目的贡献 [[Contribute]](CONTRIBUTING.md)。
+<a href="graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
+
+
+## 支持者
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
+
+<a href="https://opencollective.com/front-end-checklist#backers" target="_blank"><img src="https://opencollective.com/front-end-checklist/backers.svg?width=890"></a>
+
+
+## 赞助商
+
+通过成为赞助商来支持这个项目。您的徽标将显示在这里，并链接到您的网站。 [[成为赞助商](https://opencollective.com/front-end-checklist#sponsor)]
+
+<a href="https://opencollective.com/front-end-checklist/sponsor/0/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/1/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/2/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/3/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/4/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/5/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/6/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/7/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
 
 ## License
 
@@ -700,3 +730,5 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 [low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
 [medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
 [high_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png
+
+
