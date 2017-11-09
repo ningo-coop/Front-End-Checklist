@@ -50,7 +50,7 @@
 
 ### Meta 标签
 
-* [ ] **Doctype（档案类型）:** ![High][high_img] Doctype是HTML5，需要声明在HTML文件的顶部。
+* [ ] **Doctype:** ![High][high_img] Doctype标签声明HTML5，需要写在HTML文件的顶部。
 
 ```html
 <!-- Doctype HTML5 -->
@@ -432,7 +432,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
 
-**[⬆ back to top](#目录)**
+**[⬆ 返回顶部](#目录)**
 
 ---
 
@@ -631,7 +631,8 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Sitemap 指南 | Google 支持](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
 
-**[⬆ back to top](#目录)**
+
+**[⬆ 返回顶部](#目录)**
 
 ---
 
