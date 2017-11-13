@@ -414,7 +414,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > [压缩资源 (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
 
-* [ ] **JavaScript安全性:**
+* [ ] **JavaScript安全性:** ![High][high_img]
 
 > [用JavaScript开发安全应用程序指南](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
@@ -500,7 +500,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **懒加载:** ![Medium][medium_img] 图片、js脚本和CSS需要懒加载，以提高当前页面的响应时间（请参见各自部分的详细信息）。
 
-* [ ] **Cookie大小:** 如果使用Cookie，确保每个Cookie不超过4096个字节，并且域名下不超过20个Cookie。
+* [ ] **Cookie大小:** ![Medium][medium_img] 如果使用Cookie，确保每个Cookie不超过4096个字节，并且域名下不超过20个Cookie。
 
 > * 📖 [Cookie规范: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > * 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
@@ -625,6 +625,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Structured Data简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > * 🛠 使用[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)测试你的页面。
 > * 🛠 适用于结构化数据的完整结构列表[Schema.org Full Heirarchy](http://schema.org/docs/full.html)
+> * 📖 [RDFa - Linked Data in HTML](https://rdfa.info/)
+> * 📖 [JSON-LD](https://json-ld.org/)
+> * 📖 [Microdata](https://www.w3.org/TR/microdata/)
 
 * [ ] **Sitemap HTML（HTML网站地图）:** ![Medium][medium_img] 提供HTML网站地图，可通过网站页脚中的链接进行访问。
 
