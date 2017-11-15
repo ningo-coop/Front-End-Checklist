@@ -11,10 +11,6 @@
 
 它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。
 
-*在Product Hunt上投票或推荐来帮助**前端开发清单**的推广🌈。*
-
-[![](http://res.cloudinary.com/djnyaloac/image/upload/v1508896898/upvote-producthunt_vzys4c.jpg)](https://www.producthunt.com/posts/front-end-checklist)
-
 ## 目录
 
 1. **[Head](#head)**
