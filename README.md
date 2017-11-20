@@ -15,6 +15,10 @@
 
 它基于前端开发人员多年的经验沉淀，以及其他优秀的开源清单。
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/HxqChNNHFKFaMpEpEikk4EM4/thedaviddias/Front-End-Checklist.svg' />
+</a>
+
 ## 目录
 
 1. **[Head](#head)**
