@@ -34,11 +34,11 @@
 
 ## How to use?
 
-**前端开发清单**中的所有项目都是大部分项目所必需的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:
+**前端开发清单**中的所列出的点是大部分前端项目所必需的关注的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:
 
-* ![Low][low_img] 意味着该项目被**推荐**，但在某些特定情况下可以省略。
-* ![Medium][medium_img] 意味着该项目是**强烈推荐**的，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。
-* ![High][high_img] 意味着项目**不能被任何理由忽略**。忽略可能会导致你的页面部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。
+* ![Low][low_img] **推荐**，但在某些特定情况下可以省略。
+* ![Medium][medium_img] **强烈推荐**，但是可能在某些特殊情况下能被省略。某些元素，如果省略将会对性能或SEO方面产生不良影响。
+* ![High][high_img] **不能被任何理由忽略**。忽略可能会导致你的页面部分功能障碍或者产生可访问性以及SEO等问题。测试优先级需要首先考虑这些元素。
 
 某些资源拥有特定的标识符，帮助你去理解清单上不同类型的内容或帮助。
 
@@ -65,7 +65,7 @@
 
 *接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明*
 
-* [ ] **Charset（字符类型）:** ![High][high_img] 正确声明`Charset` meta(UTF-8)。
+* [ ] **Charset（字符类型）:** ![High][high_img] 正确声明`Charset` meta (UTF-8)。
 ```html
 <!-- 设置文档的字符编码 -->
 <meta charset="utf-8">
@@ -87,7 +87,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-* [ ] **Title（标题）:** ![High][high_img] 所有页面都使用`title`(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。
+* [ ] **Title（标题）:** ![High][high_img] 所有页面都必须使用`title`标签(SEO:Google会计算标题中使用的字符的像素宽度，范围在472和482像素之间，所以平均字符数限制大约在55个字符左右)。
 
 ```html
 <!-- 文档标题 -->
@@ -172,7 +172,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <html lang="zh_cn">
 ```
 
-* [ ] **Direction tag（方向标签）:** ![Medium][medium_img] `direction`属性规定元素内容的文本方向。(可以在另一个HTML标签上使用)。
+* [ ] **Direction tag（方向标签）:** ![Medium][medium_img] `direction`属性规定元素内容的文本方向。(可以在另一个HTML标签上使用)
 
 ```html
 <html dir="rtl">
@@ -190,7 +190,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > 📖 [关于条件注释(Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
-* [ ] **RSS feed（RSS 訂閱）:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
+* [ ] **RSS feed（RSS 订阅）:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
 * 
 * [ ] **Inline critical CSS（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
 
@@ -273,7 +273,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **Desktop Browsers:** ![High][high_img] 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
 * [ ] **Mobile Browsers:**  ![High][high_img] 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari...).
 
-* [ ] **Link checker（链接检查器）:** ![High][high_img] 页面中链接没有断开，请确认你没有404错误。
+* [ ] **Link checker（链接检查器）:** ![High][high_img] 页面中链接没有失效，请确认你没有404错误。
 
 > * 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
@@ -318,7 +318,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **CSS打印属性:** ![Medium][medium_img] 提供打印样式表，并确保使用正确。
 * [ ] **预处理器:** ![Medium][medium_img] 你的网站使用css预处理器(推荐[Sass](http://sass-lang.com/)).
 * [ ] **唯一ID:** ![High][high_img] 如果使用了ID，确保ID的唯一性。
-* [ ] **Reset CSS:** ![High][high_img] 使用CSS reset(如reset.css, normalize.css, reboot) *(如果你使用的是CSS框架，例如Bootstrap或Foundation，则reset css已被包含在其中)*
+* [ ] **Reset CSS:** ![High][high_img] 使用CSS reset(如reset.css, normalize.css, reboot) *(如果你使用的是CSS框架，例如Bootstrap或Foundation，则reset.css已被包含在其中)*
 
 > * 📖 [Reset.css](https://meyerweb.com/eric/tools/css/reset/)
 > * 📖 [Normalize.css](https://necolas.github.io/normalize.css/)
@@ -339,9 +339,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 性能
 
-- [ ] **连接:** ![High][high_img] 将CSS文件连接到一个文件中。 *(不适用HTTP/2)*
-- [ ] **压缩:** ![High][high_img] 压缩所有CSS文件。
-- [ ] **非阻塞:** ![Medium][medium_img] CSS文件需要非阻塞，以防在DOM加载时花费大量时间。
+- [ ] **Concatenation（合并）:** ![High][high_img] 将CSS文件合并到一个文件中。 *(不适用HTTP/2)*
+- [ ] **Minification（压缩）:** ![High][high_img] 压缩所有CSS文件。
+- [ ] **Non-blocking（非阻塞）:** ![Medium][medium_img] CSS文件需要非阻塞加载，以防在DOM加载时花费大量时间。
 
 > * 📖 [loadCSS by filament group](https://github.com/filamentgroup/loadCSS)
 > * 📖 [使用loadCSS预加载CSS的示例](https://gist.github.com/thedaviddias/c24763b82b9991e53928e66a0bafc9bf)
@@ -361,7 +361,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **响应式网页设计:** ![High][high_img] 所有页面都需要经过以下几种情况的测试: 320px, 768px, 1024px (根据自己的项目情况，可以设置更多)。
 
-* [ ] **CSS验证器:** ![Medium][medium_img] CSS经过测试，同时所有错误都被修复。
+* [ ] **CSS验证器:** ![Medium][medium_img] CSS都需经过测试，同时所有错误都被修复。
 > 🛠 [CSS验证器](https://jigsaw.w3.org/css-validator/)
 
 * [ ] **桌面浏览器:** ![High][high_img] 所有页面都在桌面浏览器进行了测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
@@ -386,7 +386,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 最佳实践
 
-* [ ] **优化:** ![High][high_img] 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。 All images are optimized to be rendered in the browser. WebP format could be used for critical pages (like Homepage).
+* [ ] **优化:** ![High][high_img] 所有图像都经过优化并且可在浏览器中正常显示。WebP格式可用于关键页面（如首页）。
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
@@ -398,7 +398,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **视网膜屏:** ![Low][low_img] 提供x2 或 3x的图像来支持视网膜屏显示。
 * [ ] **雪碧图:** ![Medium][medium_img] 小图片放到一个雪碧图中。
-* [ ] **宽高:** ![High][high_img] 所有`<img>`都需要设置高度和宽度(不要指定px 和 %)。
+* [ ] **宽高:** ![High][high_img] 请在<img>上设置宽度和高度属性，如果最终的渲染图像大小已知（可以忽略CSS大小）。
 * [ ] **图片描述文本:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片（在无障碍网页中尤其重要）。
 >  📖 [Alt-文本: 终极指南](https://axesslab.com/alt-texts/)
 
@@ -413,7 +413,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ### 最佳实践
 
 * [ ] **JavaScript 内联:** ![High][high_img] 确保没有任何js代码内联(与HTML代码混合)。
-* [ ] **连接:** ![High][high_img] 将js文件连接起来。
+* [ ] **合并:** ![High][high_img] 合并js文件。
 * [ ] **压缩:** ![High][high_img] 压缩所有js文件(可以添加 `.min` 后缀)。
 
 > [压缩资源 (HTML, CSS, and JavaScript)](https://developers.google.com/speed/docs/insights/MinifyResources)
@@ -466,7 +466,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > 📖 [跨站点请求伪造（CSRF）防范清单 - OWASP](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
 
-* [ ] **跨站脚本攻击(XSS):** ![High][high_img] 页面或网站没有XSS攻击的可能性。
+* [ ] **跨站脚本攻击(XSS):** ![High][high_img] 确保页面或网站没有XSS攻击的可能性。
 
 > * 📖 [XSS (跨站脚本攻击) 防范清单 - OWASP](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 > * 📖 [基于DOM的XSS防范清单 - OWASP](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
@@ -494,7 +494,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 最佳实践
 
-- [ ] **页面大小:** ![High][high_img] 每张网页的大小在0到500KB之间。
+- [ ] **页面大小:** ![High][high_img] 控制每张网页的大小在0到500KB之间。
 
 > * 🛠 [Website Page Analysis](https://tools.pingdom.com)
 > * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
@@ -524,7 +524,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <link rel="dns-prefetch" href="https://example.com">
 ```
 
-* [ ] **预连接:** ![Low][low_img] 使用`preconnect`在空闲期间提前做好DNS查询, TCP三次握手和TLS 协商。
+* [ ] **预连接:** ![Low][low_img] 使用`preconnect`在空闲期间提前做好DNS查询, TCP三次握手和TLS协商。
 
 ```html
 <link rel="preconnect" href="https://example.com">
@@ -559,15 +559,15 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ## Accessibility
 
-> **注意:** 查看播放列表[A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
+> **注意:** 查看注意事项视频列表[A11ycasts with Rob Dodson](https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g) 📹
 
 ### 最佳实践
 
-- [ ] **渐进式增强:** ![Medium][medium_img] 主要功能如主导航和搜索等功能应该在没有启用JavaScript的情况下工作。
+- [ ] **渐进式增强:** ![Medium][medium_img] 主要功能如主导航和搜索等功能应该在没有启用JavaScript的情况下能够正常运行。
 
 > 📖 [在Chrome开发者具中启用/禁用JavaScript](https://www.youtube.com/watch?v=kBmvq2cE0D8)
 
-- [ ] **颜色对比度:** ![Medium][medium_img] 颜色对比度至少通过WCAG AA标准(移动端需要通过AAA)。
+- [ ] **颜色对比度:** ![Medium][medium_img] 颜色对比度至少通过WCAG AA标准验证(移动端需要通过AAA)。
 
 > * 🛠 [Contrast ratio](https://leaverou.github.io/contrast-ratio/)
 
@@ -618,9 +618,10 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ## SEO
 
 * [ ] **Google Analytics:** ![High][high_img] Google Analytics 正确安装和配置。
-* [ ] **Headings logic:** ![Medium][medium_img] 标题文字有助于了解当前页面的主要内容。
-* [ ] **sitemap.xml:** ![High][high_img] `sitemap.xml`存在并提交到Google Search Console(以前的Google管理员工具)。
-* [ ] **robots.txt:** ![High][high_img] `robots.txt`正确配置，不阻止网页被爬取。
+* [ ] **Baidu Analytics:** ![High][high_img] Baidu Analytics 正确安装和配置（国内网站）。
+* [ ] **Headings logic:** ![Medium][medium_img] 标题文字有助于表达当前页面的主要内容。
+* [ ] **sitemap.xml:** ![High][high_img] 创建`sitemap.xml`文件并提交到Google Search Console(以前的Google管理员工具)。
+* [ ] **robots.txt:** ![High][high_img] `robots.txt`正确配置，不要阻止网页被爬取。
 
 > * 🛠 使用[Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)测试你的`robots.txt`。 
 
