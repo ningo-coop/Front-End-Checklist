@@ -288,8 +288,6 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **Adblockers test（广告拦截器测试）:** ![Medium][medium_img] 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。
 
-- [ ] **Pixel perfect（像素级实现）:** ![High][high_img] 页面的像素级实现。根据设计稿的质量，你的页面可能做不到100%的还原，但你的网页需要尽可能的靠近设计稿。
-
 > [Pixel Perfect - Chrome 扩展](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
 **[⬆ 返回顶部](#目录)**
@@ -304,18 +302,16 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **Webfont format（字体格式）:** ![High][high_img] 现代浏览器都支持WOFF、WOFF2、TTF格式
 
-> * 📖 [Google Technical considerations about webfonts](https://developers.google.com/fonts/docs/technical_considerations)
-
-> * 📖 [WOFF - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff).
-> * 📖 [WOFF 2.0 - Web Open Font Format - Caniuse](https://caniuse.com/#feat=woff2).
-> * 📖 [TTF/OTF - TrueType and OpenType font support](https://caniuse.com/#feat=ttf)
+> * 📖 [WOFF - Web开放字体格式 - Caniuse](https://caniuse.com/#feat=woff).
+> * 📖 [WOFF 2.0 - Web开放字体格式 - Caniuse](https://caniuse.com/#feat=woff2).
+> * 📖 [TTF/OTF - TrueType和OpenType字体支持](https://caniuse.com/#feat=ttf)
 > * 📖 [Using @font-face - CSS-Tricks](https://css-tricks.com/snippets/css/using-font-face/)
 
 * [ ] **Webfont size（字体大小）:** ![High][high_img] Webfont大小不超过 2 MB (包括所有版本在内)。
 
-*  [ ] **Webfont loader（字体加载器）:** ![Low][low_img] 使用webfont加载器控制加载行为。
+* [ ] **Webfont loader（字体加载器）:** ![Low][low_img] 使用Webfont加载器控制加载行为。
 
-> * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
+> * 🛠 [Typekit Web字体加载器](https://github.com/typekit/webfontloader)
 
 **[⬆ 返回顶部](#目录)**
 
@@ -359,28 +355,30 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [UnCSS Online](https://uncss-online.com/)
 > * 🛠 [PurifyCSS](https://github.com/purifycss/purifycss)
+> * 🛠 [PurgeCSS](https://github.com/FullHuman/purgecss)
 > * 🛠 [Chrome DevTools Coverage](https://developers.google.com/web/updates/2017/04/devtools-release-notes#coverage)
-
 
 ### CSS 测试
 
 * [ ] **格式检查:** ![High][high_img] 所有的CSS或SCSS文件没有任何格式错误。
+
 > * 🛠 [stylelint, a CSS linter](https://stylelint.io/)
 > * 📖 [Sass指南](https://sass-guidelin.es/)
 
 * [ ] **响应式网页设计:** ![High][high_img] 所有页面都需要经过以下几种情况的测试: 320px, 768px, 1024px (根据自己的项目情况，可以设置更多)。
 
 * [ ] **CSS验证器:** ![Medium][medium_img] CSS都需经过测试，同时所有错误都被修复。
+
 > 🛠 [CSS验证器](https://jigsaw.w3.org/css-validator/)
 
 * [ ] **桌面浏览器:** ![High][high_img] 所有页面都在桌面浏览器进行了测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
 * [ ] **移动端浏览器:**  ![High][high_img] 所有页面都在移动端浏览器进行了测试(Native browser, Chrome, Safari...)。
 * [ ] **操作系统:**  ![High][high_img] 所有页面都在当前操作系统上进行了测试(Windows, Android, iOS, Mac...)。
-* [ ] **Pixel perfect:** ![High][high_img] 页面需要像素级实现。根据设计稿的质量，你可能不会100％与设计稿相同，但你的网页需要尽可能的靠近设计稿的要求。
+* [ ] **Design fidelity 设计图保真度）:** ![High][high_img] 页面需要像素级实现。根据设计稿的质量，你可能不会100％与设计稿相同，但你的网页需要尽可能的靠近设计稿的要求。
 
 > [Pixel Perfect - Chrome Extension](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
-* [ ] **Reading direction:** ![High][high_img] 如果需要的话，所有页面都需要对LTR和RTL语言进行测试。
+* [ ] **Reading direction（浏览文本方向）:** ![High][high_img] 如果需要的话，所有页面都需要对LTR和RTL语言进行测试。
 
 > * 📖 [构建RTL-Aware Web Apps & Websites: Part 1 | Mozilla Hacks](https://hacks.mozilla.org/2015/09/building-rtl-aware-web-apps-and-websites-part-1/)
 > * 📖 [构建RTL-Aware Web Apps & Websites: Part 2 | Mozilla Hacks](https://hacks.mozilla.org/2015/10/building-rtl-aware-web-apps-websites-part-2/)
@@ -399,7 +397,12 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [Imagemin](https://github.com/imagemin/imagemin)
 > * 🛠 使用[ImageOptim](https://imageoptim.com/)免费优化您的图像。
-> * 🛠 使用[Kraken.io](https://kraken.io/web-interface)优化png和jpg格式图像。
+> * 🛠 使用[KeyCDN Image Processing](https://www.keycdn.com/support/image-processing) for image optimization in real time.
+> * 🛠 使用[Kraken.io](https://kraken.io/web-interface) png和jpg优化的绝佳替代品。 免费计划每个文件最大1mb。
+> * 🛠 [TinyPNG](https://tinypng.com/) 无损优化png，apng（动画png）和jpg图像。 提供免费和付费版本。
+> * 🛠 [ZorroSVG](http://quasimondo.com/ZorroSVG/) 使用svg遮罩的类似jpg的压缩形式的透明图像。
+> * 🛠 [SVGO](https://github.com/svg/svgo) 基于Nodejs的工具，用于优化SVG矢量图形文件。
+> * 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) 基于SVGO的基于Web的GUI版本，可在线优化您的svg。
 
 * [ ] **Picture/Srcset:** ![Medium][medium_img] 使用Picture/Srcset为用户当前的视口提供最合适的图像。
 
@@ -409,9 +412,10 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **雪碧图:** ![Medium][medium_img] 小图片放到一个雪碧图中。
 * [ ] **宽高:** ![High][high_img] 请在<img>上设置宽度和高度属性，如果最终的渲染图像大小已知（可以忽略CSS大小）。
 * [ ] **图片描述文本:** ![High][high_img] 所有 `<img>` 必须有`alt`属性来直观的描述图片（在无障碍网页中尤其重要）。
->  📖 [Alt-文本: 终极指南](https://axesslab.com/alt-texts/)
 
-* [ ] **懒加载:** ![Medium][medium_img] 图片懒加载 (A noscript fallback is always provided).
+> 📖 [Alt-文本: 终极指南](https://axesslab.com/alt-texts/)
+
+* [ ] **懒加载:** ![Medium][medium_img] 图片使用懒加载 (记得适中提供 noscript 标签).
 
 **[⬆ 返回顶部](#目录)**
 
