@@ -255,11 +255,11 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 最佳实践
 
-* [ ] **HTML5 Semantic Elements（HTML5语义化元素）:** ![High][high_img] 正确的使用HTML5语义化标签(header, section, footer, main...).
+* [ ] **HTML5 Semantic Elements（HTML5语义化元素）:** ![High][high_img] 正确地使用HTML5语义化标签(header, section, footer, main...).
 
 > 📖 [HTML 参考](http://htmlreference.io/)
 
-* [ ] **Error pages（错误页面）:** ![High][high_img] 404页面和5xx错误的存在。5xx错误页面需要集成其CSS(在当前服务器上无外部调用)。
+* [ ] **Error pages（错误页面）:** ![High][high_img] 404页面和5xx错误页面的存在。记得在5xx错误页面中集成CSS样式文件(在当前服务器上无外部调用)。
 
 * [ ] **Noopener:** ![Medium][medium_img] 如果你使用外部链接`target="_blank"`, 你的链接必须有个`rel="noopener"`属性，防止制表符的隐藏。如果你需要兼容旧版本的火狐浏览器，请使用`rel="noopener noreferrer"`。
 
@@ -275,10 +275,11 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **HTML Lint:** ![High][high_img] 使用工具来帮助我们分析HTML代码中可能存在的问题。
 
-> * 🛠 [Dirty markup](https://dirtymarkup.com/)
-> * 🛠 [Sonar a linting tool for the web](https://sonarwhal.com/)
+> * 🛠 [肮脏的标记列表](https://www.10bestdesign.com/dirtymarkup/)
+> * 🛠 [webhint](https://webhint.io/)
 
 * [ ] **Desktop Browsers:** ![High][high_img] 所有页面都在桌面浏览器上通过测试(Safari, Firefox, Chrome, Internet Explorer, EDGE...)。
+
 * [ ] **Mobile Browsers:**  ![High][high_img] 所有页面都在移动端浏览器上通过测试(Native browser, Chrome, Safari...).
 
 * [ ] **Link checker（链接检查器）:** ![High][high_img] 页面中链接没有失效，请确认你没有404错误。
@@ -287,7 +288,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **Adblockers test（广告拦截器测试）:** ![Medium][medium_img] 你的的网站会在启用广告拦截器的情况下正确显示页面内容(你可以提供一条消息，引导人们停用其广告拦截器)。
 
-- [ ] **Pixel perfect:** ![High][high_img] 页面的像素级实现。根据设计稿的质量，你的页面可能做不到100%的还原，但你的网页需要尽可能的靠近设计稿。
+- [ ] **Pixel perfect（像素级实现）:** ![High][high_img] 页面的像素级实现。根据设计稿的质量，你的页面可能做不到100%的还原，但你的网页需要尽可能的靠近设计稿。
 
 > [Pixel Perfect - Chrome 扩展](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en)
 
