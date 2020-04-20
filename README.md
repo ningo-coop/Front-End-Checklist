@@ -672,7 +672,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [Sitemap 指南 | Google 支持](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
 
-* [ ] **Pagination link tags:** ![Medium][medium_img] Provide `rel="prev"` and `rel="next"` to indicate paginated content.
+* [ ] **Pagination link tags:** ![Medium][medium_img] 提供`rel =“ prev”`和`rel =“ next”`来指示分页的内容。
 
 > * 🛠 [分页（rel =“ prev / next”）测试工具](https://technicalseo.com/seo-tools/rel-prev-next/)
 > * 📖 [分页准则 - Google Support](https://support.google.com/webmasters/answer/1663744?hl=en)
