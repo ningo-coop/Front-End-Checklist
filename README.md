@@ -32,7 +32,7 @@
 9. **[Accessibility](#accessibility)**
 10. **[SEO](#seo)**
 
-## How to use?
+## 一些声明
 
 **前端开发清单**中的所列出的点是大部分前端项目所必需的关注的, 但某些元素可以省略或者并不是这么重要 (在管理Web应用程序的情况下，你可能并不需要RSS订阅源)。我们选择使用一下3级区分:
 
@@ -54,7 +54,7 @@
 
 ### Meta 标签
 
-* [ ] **Doctype:** ![High][high_img] Doctype标签声明HTML5，需要写在HTML文件的顶部。
+* [ ] **Doctype（文档类型）:** ![High][high_img] 以下Doctype标签声明文档为HTML5，需要写在HTML文件的顶部。
 
 ```html
 <!-- Doctype HTML5 -->
@@ -63,22 +63,14 @@
 
 > * 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-*接下来三个 meta 标签 (Charset, X-UA Compatible, Viewport) 需要首先在head中声明*
+* 下列三个 meta 标签 (Charset 和 Viewport) 需要首先声明在head中。*
 
 * [ ] **Charset（字符类型）:** ![High][high_img] 正确声明`Charset` meta (UTF-8)。
+
 ```html
 <!-- 设置文档的字符编码 -->
 <meta charset="utf-8">
 ```
-
-* [ ] **X-UA-Compatible（IE相关设定）:** ![Medium][medium_img] 正确声明`X-UA-Compatible` meta。
-
-```html
-<!-- 指示Internet Explorer使用其最新的渲染引擎 -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-```
-
-> 📖 [指定旧文档模式(Internet Explorer)](https://msdn.microsoft.com/en-us/library/jj676915(v=vs.85).aspx)
 
 * [ ] **Viewport（视口）:** ![High][high_img] 正确声明`viewport` meta。
 
@@ -120,14 +112,22 @@
 > * 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS 技巧](https://css-tricks.com/favicon-quiz/)
 > * 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-* [ ] **Apple Touch Icon:** ![Low][low_img] 苹果设备favicon适配。 *(创建至少200x200像素尺寸的Apple图标文件以支持你可能需要的用到的所有尺寸)*
+* [ ] **Apple Web App Meta:** ![Low][low_img] 苹果设备目前使用的 Meta 标签
 
 ```html
-<!-- Apple Touch Icon -->
+<!-- (创建至少200x200像素尺寸的Apple图标文件以支持你可能需要的用到的所有尺寸) -->
 <link rel="apple-touch-icon" href="/custom-icon.png">
+
+<!-- 设置Web应用程序是否以全屏模式运行。 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- 设置状态栏样式（有关其可用值，请参见下面的“苹果设备支持的Meta标记列表”） -->
+<!-- 除非您具有先前的Meta标签，否则本Meta标签无效 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
 ```
 
-> 📖 [配置Web应用程序](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+> * 📖 [在苹果设备中配置Web应用程序](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+> * 📖 [苹果设备支持的Meta标记列表](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
 - [ ] **Windows Tiles:**![Low][low_img] Windows tiles are present and linked.
 
@@ -308,7 +308,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [Typekit Web Font Loader](https://github.com/typekit/webfontloader)
 
-**[⬆ 返回顶部](#table-of-contents)**
+**[⬆ 返回顶部](#目录)**
 
 ## CSS
 
@@ -644,26 +644,27 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ---
 
-## Translation
+## 多语种清单
 
-The Front-End Checklist is also available in other languages. Thanks for all translators and their awesome work!
+这份“前端开发清单”同样被翻译为如下语言版本，感谢所有翻译者的热情贡献！
 
-* 🇯🇵 Japanese: [miya0001/Front-End-Checklist](https://github.com/miya0001/Front-End-Checklist)
-* 🇪🇸 Spanish: [eoasakura/Front-End-Checklist-ES](https://github.com/eoasakura/Front-End-Checklist-ES)
-* 🇨🇳 Chinese: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
-* 🇰🇷 Korean: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
-* 🇧🇷 Portuguese: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
-* 🇻🇳 Vietnamese: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
-* 🇹🇼 Traditional Chinese: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
-* 🇫🇷 French: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
-* 🇷🇺 Russian: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
-* 🇹🇷 Turkish: [erdoganoksuz/Front-End-Checklist](https://github.com/erdoganoksuz/Front-End-Checklist)
+* 🇯🇵 日语: [miya0001/Front-End-Checklist](https://github.com/miya0001/Front-End-Checklist)
+* 🇪🇸 西班牙语: [eoasakura/Front-End-Checklist-ES](https://github.com/eoasakura/Front-End-Checklist-ES)
+* 🇨🇳 简体中文: [JohnsenZhou/Front-End-Checklist](https://github.com/JohnsenZhou/Front-End-Checklist)
+* 🇰🇷 韩语: [kesuskim/Front-End-Checklist](https://github.com/kesuskim/Front-End-Checklist)
+* 🇧🇷 葡萄牙语: [jcezarms/Front-End-Checklist](https://github.com/jcezarms/Front-End-Checklist)
+* 🇻🇳 越南语: [euclid1990/Front-End-Checklist](https://github.com/euclid1990/Front-End-Checklist)
+* 🇹🇼 繁体中文: [EngineLin/Front-End-Checklist](https://github.com/EngineLin/Front-End-Checklist)
+* 🇫🇷 法语: [ynizon/Front-End-Checklist](https://github.com/ynizon/Front-End-Checklist)
+* 🇷🇺 俄语: [ungear/Front-End-Checklist](https://github.com/ungear/Front-End-Checklist)
+* 🇹🇷 土耳其语: [erdoganoksuz/Front-End-Checklist](https://github.com/erdoganoksuz/Front-End-Checklist)
+* 🇩🇪 德语: [xfuture603/Front-End-Checklist](https://github.com/xFuture603/Front-End-Checklist)
 
 ---
 
 ## 前端开发清单徽章
 
-如果想显示出你的项目遵循了前端开发清单的各项规定，请将此徽章放在项目的README文件上！
+如果想标示出你的项目遵循了这份“前端开发清单”的各项规定，欢迎将如下徽章放在你的项目的README文件上！
 
 ➔ [![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
 
@@ -675,23 +676,24 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 
 ---
 
-## Contributing
+## 贡献
 
 **提issue或提交合并请求以建议更改或添加。**
 
-### Guide
+### 指南
 
 **前端开发清单** 项目有两个分支:
 
 #### 1. `master`
 
-该分支包含`README.md`,内容会自动反映到[前端开发清单](http://frontendchecklist.com/)。
+该分支包含`README.md`,内容会自动映射到[前端开发清单](http://frontendchecklist.com/)。
 网站上。
+
 #### 2. `develop`
 
 这个分支将用于对结构和内容进行一些重大更改。不过最好还是使用主分支来修复小错误或添加新项目。
 
-## Support
+## 社区支持
 
 如果您有任何问题或建议，可以通过Gitter或Twitter联系我们：
 
@@ -708,13 +710,11 @@ The Front-End Checklist is also available in other languages. Thanks for all tra
 感谢以下人员对本项目的贡献 [[Contribute]](CONTRIBUTING.md)。
 <a href="graphs/contributors"><img src="https://opencollective.com/front-end-checklist/contributors.svg?width=890" /></a>
 
-
 ## 支持者
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/front-end-checklist#backer)]
+感谢所有赞助我们的朋友! 🙏 [[成为支持者](https://opencollective.com/front-end-checklist#backer)]
 
 <a href="https://opencollective.com/front-end-checklist#backers" target="_blank"><img src="https://opencollective.com/front-end-checklist/backers.svg?width=890"></a>
-
 
 ## 赞助商
 
@@ -731,14 +731,13 @@ Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com
 <a href="https://opencollective.com/front-end-checklist/sponsor/8/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/8/avatar.svg"></a>
 <a href="https://opencollective.com/front-end-checklist/sponsor/9/website" target="_blank"><img src="https://opencollective.com/front-end-checklist/sponsor/9/avatar.svg"></a>
 
-## License
+## 开源协议
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
 **[⬆ 回到顶部](#目录)**
 
-[low_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-low.png
-[medium_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-medium.png
-[high_img]: http://res.cloudinary.com/djnyaloac/image/upload/v1508238836/level-checklist-high.png
-
+[low_img]: data/images/priority/low.svg
+[medium_img]: data/images/priority/medium.svg
+[high_img]: data/images/priority/high.svg
 
