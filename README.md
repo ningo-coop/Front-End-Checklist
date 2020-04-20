@@ -520,13 +520,16 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 ### 最佳实践
 
-- [ ] **页面大小:** ![High][high_img] 控制每张网页的大小在0到500KB之间。
+- [ ] **需要达到的目标:** ![Medium][medium_img] 你的网页需要达到如下目标：
+  - 在第一秒内展示出一个有意义的绘画
+  - 在“平均”配置下互动时间不到5秒（在速度为400ms的RTT和400kbps传输速度的慢速3G网络上，售价200美元的Android）在2秒内可以重复访问
+  - 压缩后的关键文件大小低于170Kb
 
-> * 🛠 [Website Page Analysis](https://tools.pingdom.com)
-> * 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
+> * 🛠 [网站页面分析器](https://tools.pingdom.com)
+> * 🛠 [WebPageTest](https://www.webpagetest.org/)
+> * 📖 [Size Limit: 使网页更轻](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
 - [ ] **文件压缩:** ![Medium][medium_img] 压缩你的HTML文件。
-> 🛠 [W3C Validator](https://validator.w3.org/)
 
 * [ ] **懒加载:** ![Medium][medium_img] 图片、js脚本和CSS需要懒加载，以提高当前页面的响应时间（请参见各自部分的详细信息）。
 
@@ -538,12 +541,12 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 * [ ] **第三方组件:** ![Medium][medium_img] 在可能的情况下，用静态组件替代依赖于外部JS的第三方iframe或组件（如共享按钮），从而限制对外部API的调用，并将用户活动保持为私有。
 
-> * 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
+> * 🛠 [简单的共享按钮生成器](https://simplesharingbuttons.com/)
 
 ### 为将到来的请求做准备
 
 > 📖 [以下几种技术的详细说明](https://css-tricks.com/prefetching-preloading-prebrowsing/)
-> 
+
 * [ ] **DNS解析:** ![Low][low_img] 使用`dns-prefetch`让第三方DNS服务商主动去执行域名解析的功能。
 
 ```html
@@ -577,7 +580,8 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > * 🛠 [用Google测试移动端速度](https://testmysite.withgoogle.com)
 > * 🛠 [WebPagetest - 网站性能和优化测试](https://www.webpagetest.org/)
-> * 🛠 [GTmetrix - Website speed and performance optimization](https://gtmetrix.com/)
+> * 🛠 [GTmetrix - 网站速度和性能优化](https://gtmetrix.com/)
+> * 🛠 [Speedrank - 改善您网站的性能](https://speedrank.app/)
 
 **[⬆ 返回顶部](#目录)**
 
@@ -603,15 +607,6 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **Headings:** ![High][high_img] 标题应以正确的顺序合理使用(H1至H6)。
 
 > * 📹 [Why headings and landmarks are so important -- A11ycasts #18](https://www.youtube.com/watch?v=vAAzdi1xuUY&index=9&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)
-
-#### Landmarks
-
-- [ ] **banner角色:** ![High][high_img] `<header>` 标签中加入 `role="banner"`属性。
-- [ ] **navigation角色:** ![High][high_img] `<nav>` 标签中加入 `role="navigation"`属性。
-- [ ] **main角色:** ![High][high_img] `<main>` 标签中加入 `role="main"`属性。
-
-> * 📖 [Using ARIA landmarks to identify regions of a page](https://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page)
-> * 📖 [ARIA roles categorization](https://www.w3.org/TR/wai-aria/roles#roles_categorization)
 
 ### 语义化
 
@@ -644,27 +639,49 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ## SEO
 
 * [ ] **Google Analytics:** ![High][high_img] Google Analytics 正确安装和配置。
+
+> * 🛠 [Google Analytics](https://analytics.google.com/analytics/web/)
+> * 🛠 [GA Checker (and others)](http://www.gachecker.com/)
+
 * [ ] **Baidu Analytics:** ![High][high_img] Baidu Analytics 正确安装和配置（国内网站）。
+
 * [ ] **Headings logic:** ![Medium][medium_img] 标题文字有助于表达当前页面的主要内容。
+
+> * 🛠 [Tota11y, tab Headings](http://khan.github.io/tota11y/#Try-it)
+
 * [ ] **sitemap.xml:** ![High][high_img] 创建`sitemap.xml`文件并提交到Google Search Console(以前的Google管理员工具)。
+
+> * 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
+
 * [ ] **robots.txt:** ![High][high_img] `robots.txt`正确配置，不要阻止网页被爬取。
 
+> * 📖 [The robots.txt file](https://varvy.com/robottxt.html)
 > * 🛠 使用[Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)测试你的`robots.txt`。 
 
 * [ ] **Structured Data（结构化数据）:** ![High][high_img] 使用Structured Data的页面通过测试并且没有错误。Structured Data会帮助爬虫理解当前页面的内容。
 
-> * 📖 [Structured Data简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
-> * 🛠 使用[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)测试你的页面。
-> * 🛠 适用于结构化数据的完整结构列表[Schema.org Full Heirarchy](http://schema.org/docs/full.html)
+> * 📖 [Structured Data 简介 | 搜索 | Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > * 📖 [RDFa - Linked Data in HTML](https://rdfa.info/)
 > * 📖 [JSON-LD](https://json-ld.org/)
 > * 📖 [Microdata](https://www.w3.org/TR/microdata/)
+> * 🛠 使用[Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)测试你的页面。
+> * 🛠 适用于结构化数据的完整结构列表[Schema.org Full Heirarchy](http://schema.org/docs/full.html)
 
 * [ ] **Sitemap HTML（HTML网站地图）:** ![Medium][medium_img] 提供HTML网站地图，可通过网站页脚中的链接进行访问。
 
 > * 📖 [Sitemap 指南 | Google 支持](https://support.google.com/webmasters/answer/183668?hl=en)
 > * 🛠 [Sitemap 生成器](https://websiteseochecker.com/html-sitemap-generator/)
 
+* [ ] **Pagination link tags:** ![Medium][medium_img] Provide `rel="prev"` and `rel="next"` to indicate paginated content.
+
+> * 🛠 [分页（rel =“ prev / next”）测试工具](https://technicalseo.com/seo-tools/rel-prev-next/)
+> * 📖 [分页准则 - Google Support](https://support.google.com/webmasters/answer/1663744?hl=en)
+
+```html
+<!-- Example: Pagination link tags for page 2 of a paginated list -->
+<link rel="prev" href="https://example.com/?page=1">
+<link rel="next" href="https://example.com/?page=3">
+```
 
 **[⬆ 返回顶部](#目录)**
 
