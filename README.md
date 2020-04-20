@@ -435,19 +435,32 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > [用JavaScript开发安全应用程序指南](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
 
+* [ ] **`noscript` 标签:** ![Medium][medium_img] 在 HTML 的 body 标签里使用 `<noscript>` 标签以在客户端不支持JavaScript时提供其他展示, [一个使用示例](https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498).
+
+```html
+<noscript>
+  您需要启用JavaScript才能运行此应用。
+</noscript>
+```
+
 * [ ] **Non-blocking（非阻塞）:** ![Medium][medium_img] JavaScript文件使用async或延迟使用defer属性异步加载。
 
-> * 📖 [Remove Render-Blocking JavaScript](https://developers.google.com/speed/docs/insights/BlockingJS)
+> * 📖 [删除阻止渲染的JavaScript代码](https://developers.google.com/speed/docs/insights/BlockingJS)
 
-* [ ] **Modernizr:** ![Low][low_img] 如果您需要指定某些特定功能，则可以使用自定义Modernizr在`<html>`标签中添加class。
+* [ ] **优化和更新JS依赖库:** ![Medium][medium_img] 项目中使用的所有JavaScript库需要更新至最新版本（对于简单的功能，建议使用Vanilla Javascript）。
 
-> * 🛠 [Customize your Modernizr](https://modernizr.com/download?setclasses)
+> * 📖 [你或许并不需要jQuery](http://youmightnotneedjquery.com/)
+> * 📖 [使用原生JavaScript来构建功能强大的Web应用程序](https://plainjs.com/)
+
+* [ ] **Modernizr（现代化）:** ![Low][low_img] 如果您需要指定某些特定功能，则可以使用自定义Modernizr在`<html>`标签中添加class。
+
+> * 🛠 [自定义你的 Modernizr](https://modernizr.com/download?setclasses)
 
 ### JavaScript 测试
 
 * [ ] **ESLint:** ![High][high_img] 用ESLint检测并没有错误(基于你的配置规则)。
 
-> * 📖 [ESLint - The pluggable linting utility for JavaScript and JSX](https://eslint.org/)
+> * 📖 [ESLint - 适用于JavaScript和JSX的可插入linting实用程序](https://eslint.org/)
 
 **[⬆ 返回顶部](#目录)**
 
