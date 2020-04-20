@@ -471,8 +471,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 ### 扫描并检查你的网站
 
 > * [securityheaders.io](https://securityheaders.io/)
-> * [Observatory by Mozilla](https://observatory.mozilla.org/)
-> * [ASafaWeb - Automated Security Analyser for ASP.NET Websites](https://asafaweb.com/)
+> * [Mozilla 的 Observatory 项目](https://observatory.mozilla.org/)
 
 ### 最佳实践
 
@@ -480,13 +479,13 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 
 > * 🛠 [Let's Encrypt - 免费 SSL/TLS 证书](https://letsencrypt.org/)
 > * 🛠 [免费 SSL 服务测试](https://www.ssllabs.com/ssltest/index.html)
-> * 📖 [Strict Transport Security](http://caniuse.com/#feat=stricttransportsecurity)
+> * 📖 [Can I Use 上严格的传输安全列表](http://caniuse.com/#feat=stricttransportsecurity)
 
 * [ ] **HTTP严格传输安全性(HSTS):** ![Medium][medium_img] HTTP头设置 'Strict-Transport-Security'.
 
-> * 🛠 [Check HSTS preload status and eligibility](https://hstspreload.org/)
-> * 📖 [HTTP Strict Transport Security Cheat Sheet - OWASP](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
-> * 📖 [Transport Layer Protection Cheat Sheet - OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
+> * 🛠 [检查HSTS预加载状态和资格](https://hstspreload.org/)
+> * 📖 [HTTP严格传输安全速查表 - OWASP](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
+> * 📖 [传输层保护速查表 - OWASP](https://www.owasp.org/index.php/Transport_Layer_Protection_Cheat_Sheet)
 
 * [ ] **跨站点请求伪造攻击(CSRF):** ![High][high_img] 确保向服务器端发出的请求是合法的，并来自您的网站/应用程序，以防止发生CSRF攻击。
 
@@ -497,7 +496,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [XSS (跨站脚本攻击) 防范清单 - OWASP](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 > * 📖 [基于DOM的XSS防范清单 - OWASP](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet)
 
-* [ ] **Content Type Options** ![Medium][medium_img] 防止Google Chrome和Internet Explorer尝试将响应的内容类型从服务器声明的内容类型中嗅探出来。
+* [ ] **Content Type Options（内容类型选项）** ![Medium][medium_img] 防止Google Chrome和Internet Explorer尝试将响应的内容类型从服务器声明的内容类型中嗅探出来。
 
 > * 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
@@ -509,8 +508,9 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 * [ ] **Content Security Policy（内容安全策略）** ![Medium][medium_img] 定义内容如何加载到您的网站上的方式以及允许加载的位置。也可以用来防止劫持攻击。
  
 > * 📖 [内容安全策略 - 介绍 - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
-> * 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
-> * 📖 [CSP Cheat Sheet - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
+> * 📖 [CSP 速查表 - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
+> * 📖 [CSP 速查表 - OWASP](https://www.owasp.org/index.php/Content_Security_Policy_Cheat_Sheet)
+> * 📖 [内容安全政策参考](https://content-security-policy.com/)
 
 **[⬆ 返回顶部](#目录)**
 
