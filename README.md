@@ -54,18 +54,18 @@
 
 ### Meta 标签
 
-* [ ] **Doctype（文档类型）:** ![High][high_img] 以下Doctype标签声明文档为HTML5，需要写在HTML文件的顶部。
+* [ ] **Doctype（文档类型）:** ![High][high_img] 以下Doctype标签声明文档为HTML5类型，需要写在HTML文件的顶部。
 
 ```html
-<!-- Doctype HTML5 -->
+<!-- 声明文档为 HTML5 类型 -->
 <!doctype html>
 ```
 
-> * 📖 [Determining the character encoding - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
+> * 📖 [设置文档字符编码格式 - HTML5 W3C](https://www.w3.org/TR/html5/syntax.html#determining-the-character-encoding)
 
-* 下列三个 meta 标签 (Charset 和 Viewport) 需要首先声明在head中。*
+* 下列两个 meta 标签需要首先声明在head中：Charset 和 Viewport。*
 
-* [ ] **Charset（字符类型）:** ![High][high_img] 正确声明`Charset` meta (UTF-8)。
+* [ ] **Charset（字符）:** ![High][high_img] 正确声明`Charset` meta (UTF-8)。
 
 ```html
 <!-- 设置文档的字符编码 -->
@@ -86,18 +86,19 @@
 <title>网站标题不超过55个字符</title>
 ```
 
-> * 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
-> * 🛠 [SERP Snippet Generator](https://www.sistrix.com/serp-snippet-generator/)
+> * 📖 [Title 标签 - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
+> * 🛠 [SERP 代码段生成器](https://www.sistrix.com/serp-snippet-generator/)
 
-* [ ] **Description（描述）:** ![High][high_img] 提供`description`标签， 它是唯一的同时内容不能超过150个字符。
+* [ ] **Description（描述）:** ![High][high_img] 提供`description`标签， 它是唯一的，且内容不能超过150个字符。
 
 ```html
 <!-- Meta Description -->
 <meta name="description" content="Description of the page less than 150 characters">
 ```
-> * 📖[Meta Description - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
 
-* [ ] **Favicons:** ![Medium][medium_img] 每个`favicon`都被创建并正确显示，如果你只有一个`favicon.ico`，把它放在你网站的根目录下。 通常来说你不需要做任何操作他就能正常显示。 然而, 使用一下示例中的方法是比较好的做法。不过现在我们推荐使用**PNG**格式，相比`.ico`格式有较好的优势(推荐尺寸: 32x32px)。
+> * 📖[Meta Description 属性 - HTML - MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#Adding_an_author_and_description)
+
+* [ ] **Favicons（图标）:** ![Medium][medium_img] 每个`favicon`都被创建并正确显示，如果你只有一个`favicon.ico`，把它放在你网站的根目录下。 通常来说你不需要做任何操作他就能正常显示。 然而, 使用一下示例中的方法是比较好的做法。不过现在我们推荐使用**PNG**格式，相比`.ico`格式有较好的优势(推荐尺寸: 32x32px)。
 
 ```html
 <!-- 标准favicon -->
@@ -129,7 +130,7 @@
 > * 📖 [在苹果设备中配置Web应用程序](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
 > * 📖 [苹果设备支持的Meta标记列表](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html)
 
-- [ ] **Windows Tiles:**![Low][low_img] Windows tiles are present and linked.
+- [ ] **Windows Tiles:**![Low][low_img] Windows 操作系统磁贴
 
 ```html
 <!-- Microsoft Tiles -->
@@ -161,8 +162,8 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-red.html">
 ```
 
-> - 📖 [Use canonical URLs - Search Console Help - Google Support](https://support.google.com/webmasters/answer/139066?hl=en)
-> - 📖 [5 common mistakes with rel=canonical - Google Webmaster Blog](https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html)
+> - 📖 [使用规范的URLs - Search Console Help - Google Support](https://support.google.com/webmasters/answer/139066?hl=en)
+> - 📖 [rel = canonical的5个常见错误 - Google Webmaster Blog](https://webmasters.googleblog.com/2013/04/5-common-mistakes-with-relcanonical.html)
 
 ### HTML 标签
 
@@ -178,7 +179,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <html dir="rtl">
 ```
 
-> * 📖 [dir - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
+> * 📖 [dir 属性 - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir)
 
 * [ ] **Alternate language（备用语言）:** ![Low][low_img] 指定网站的语言标签并与当前页面的语言相关联。
 
@@ -186,19 +187,27 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <link rel="alternate" href="https://es.example.com/" hreflang="es">
 ```
 
-* [ ] **Alternate language（条件注释）:** ![Low][low_img] 如有需要，可针对IE添加条件注释。
+* [ ] **x-default:** ![Low][low_img] 表明此类网页未定位到特定的语言或区域设置。
+
+```html
+<link rel="alternate" href="https://example.com/" hreflang="x-default" />
+```
+
+> * 📖 [x-default - Google](https://webmasters.googleblog.com/2013/04/x-default-hreflang-for-international-pages.html)
+
+* [ ] **Conditional comments（条件注释）:** ![Low][low_img] 如有需要，可针对IE添加条件注释。
 
 > 📖 [关于条件注释(Internet Explorer) - MSDN - Microsoft](https://msdn.microsoft.com/en-us/library/ms537512(v=vs.85).aspx)
 
 * [ ] **RSS feed（RSS 订阅）:** ![Low][low_img] 如果你的项目是一个博客或者有大量的文章，可以添加一个RSS链接。
-* 
-* [ ] **Inline critical CSS（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
 
-> * 🛠 [Critical by Addy Osmani on GitHub](https://github.com/addyosmani/critical)
+* [ ] **CSS Critical（最小 CSS 合集）:** ![Medium][medium_img] `CSS critical`收集并呈现当前页面可见部分的核心CSS。在主要的CSS调用渲染之前以单行(最小化)在`<style></style>`中嵌入。
+
+> * 🛠 [由Addy Osmani于GitHub撰写的Critical](https://github.com/addyosmani/critical)
 
 * [ ] **CSS order（加载顺序）:** ![High][high_img] 所有CSS文件都需要在JavaScript文件加载之前加载完成(除了有时JS文件异步加载到页面之外的情况)。
 
-### Social meta
+### Social meta 标签
 
 强烈推荐***Facebook OG*** and ***Twitter Cards***。如果你针对某些特定的存在并希望确保显示，也可以考虑其他社交媒体的meta。
 
@@ -222,9 +231,8 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 > * 📖 [A Guide to Sharing for Webmasters](https://developers.facebook.com/docs/sharing/webmasters/)
 > * 🛠 使用[Facebook OG testing](https://developers.facebook.com/tools/debug/)测试你的页面。
 > * 📖 [Best Practices - Sharing](https://developers.facebook.com/docs/sharing/best-practices/)
-> * 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
 
-* [ ] **Twitter Card:** ![Low][low_img]
+* [ ] **Twitter 卡片:** ![Low][low_img]
 
 ```html
 <meta name="twitter:card" content="summary">
@@ -236,7 +244,7 @@ browserconfig.xml文件的最小所需xml标记如下所示:
 <meta name="twitter:image" content="https://example.com/image.jpg">
 ```
 
-> * 📖 [Getting started with cards — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
+> * 📖 [推特卡片使用入门 — Twitter Developers](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started)
 > * 🛠 使用[Twitter card validator](https://cards-dev.twitter.com/validator)测试你的页面。
 
 **[⬆ 返回顶部](#目录)**
